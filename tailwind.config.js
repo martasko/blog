@@ -24,6 +24,7 @@ module.exports = {
       },
       colors: {
         primary: colors.teal,
+        mydark: '#111827',
         //@ts-ignore
         gray: colors.neutral, // TODO: Remove ts-ignore after tw types gets updated to v3
       },
@@ -142,7 +143,9 @@ module.exports = {
             },
             strong: { color: theme('colors.gray.100') },
             thead: {
-              color: theme('colors.gray.100'),
+              th: {
+                color: theme('colors.gray.100'),
+              },
             },
             tbody: {
               tr: {

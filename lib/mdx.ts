@@ -56,8 +56,8 @@ export async function getFileBySlug<T>(type: 'authors' | 'blog', slug: string | 
 
   const toc: Toc = []
 
-  // Parsing frontmatter here to pass it in as options to rehype plugin
-  const { data: frontmatter } = matter(source)
+  // Parsing frontmatter heråe to pass it in as options to rehype plugin
+  const { data: frontmatter } = matter<string, T>(source)
   const { code } = await bundleMDX({
     source,
     // mdx imports can be automatically source from the components directory
