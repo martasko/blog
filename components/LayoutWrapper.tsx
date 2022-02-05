@@ -14,7 +14,7 @@ interface Props {
 
 function Logo() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 149" className="w-12 mr-3">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 149" className="mr-3 w-12">
       <path
         className="logod"
         d="M79.529 34.618L102.414 0h23.596c13.462 0 24.857 4.472 34.185 13.415 9.327 8.943 13.991 20.145 13.991 33.608v54.522c0 13.463-4.664 24.666-13.991 33.608-9.328 8.943-20.723 13.415-34.185 13.415H79.529v-3.937c4.744-2.259 9.002-5.576 12.795-9.91 5.14-6.063 8.519-12.984 10.09-20.771h23.596c8.846 0 13.27-4.135 13.27-12.405V47.023c0-8.27-4.424-12.405-13.27-12.405H79.529z"
@@ -32,10 +32,10 @@ function Logo() {
 const LayoutWrapper = ({ children }: Props) => {
   return (
     <SectionContainer>
-      <div className="flex flex-col justify-between h-screen">
+      <div className="flex h-screen flex-col justify-between">
         <header className="flex items-center justify-between py-10">
           <div>
-            <Link href="/" aria-label="Tailwind CSS Blog">
+            <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
                 <div className="mr-3">
                   <Logo />
@@ -56,7 +56,7 @@ const LayoutWrapper = ({ children }: Props) => {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
+                  className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
                 >
                   {link.title}
                 </Link>
